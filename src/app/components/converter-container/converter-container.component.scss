@@ -1,0 +1,33 @@
+@import "../../../styles.scss"; 
+
+.converter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px;
+
+    .headline-text {
+        font-weight: bold;
+    }
+
+    .converter-inputs-container {
+        margin-bottom: 15px;
+
+        .input-field {
+            margin-right: 7px;
+            margin-left: 7px;
+        }
+    }
+
+    .progress-bar-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .conversion-result{
+        color: $base-color;
+        font-weight: bold;
+    }
+}

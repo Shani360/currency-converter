@@ -1,0 +1,23 @@
+<div>
+    <nav mat-tab-nav-bar
+    color="primary"
+    backgroundColor="primary"
+    [tabPanel]="tabPanel"
+    mat-stretch-tabs="false" 
+    mat-align-tabs="start"
+    class="yellow">
+    <a mat-tab-link 
+        *ngFor="let tab of tabs;" 
+        [routerLink]="tab.link"
+        (click)="activeLink = tab.link"
+         [active]="activeLink == tab.link"
+         routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+        {{tab.title}}
+    </a>
+      </nav>
+
+      <mat-tab-nav-panel #tabPanel>
+        <router-outlet></router-outlet>
+      </mat-tab-nav-panel>
+</div>
+
