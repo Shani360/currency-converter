@@ -37,6 +37,6 @@
             <div *ngIf="isSubmittimg" class="progress-bar-container">
                 <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
             </div>
-            <h4 *ngIf="result && result.result && !isSubmittimg" class="conversion-result">{{result.amount | currency: (result.to || ''):'symbol-narrow':'1.2-2'}} = {{result.result.toString()| currency: (result.from || ''):'symbol-narrow':'1.2-2'}}</h4>
+            <h4 *ngIf="result && result.result && !isSubmittimg" class="conversion-result">{{result.amount | currency: (result.from || ''):'symbol-narrow':'1.2-2'}} = {{result.result.toString()| currency: (result.to || ''):'symbol-narrow':'1.2-2'}}</h4>
     </div>
 </div>

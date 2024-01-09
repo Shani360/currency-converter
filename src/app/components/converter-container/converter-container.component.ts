@@ -49,8 +49,8 @@ export class ConverterContainerComponent {
     this.isSubmittimg = true;
     
     const converted : Converted = {...this.convertInitVaue, amount : this.convertCurrencyGroup.controls.amount.value || this.convertInitVaue.amount,
-                                  to : this.convertCurrencyGroup.controls.from.value || this.convertInitVaue.from,
-                                  from:  this.convertCurrencyGroup.controls.to.value || this.convertInitVaue.to};
+                                  to : this.convertCurrencyGroup.controls.to.value || this.convertInitVaue.from,
+                                  from:  this.convertCurrencyGroup.controls.from.value || this.convertInitVaue.to};
     try {
       this.currencyDataService.convert(converted)
       .subscribe((convertResult : any) => {
